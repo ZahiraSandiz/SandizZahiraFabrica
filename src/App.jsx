@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>ecommerce FABRICA</h1>
+      <h1>Ecommerce FABRICA</h1>
     </>
   );
 }
