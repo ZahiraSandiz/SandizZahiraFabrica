@@ -1,0 +1,80 @@
+.contenedor-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  background: #fff;
+  padding: 0 60px;
+}
+
+.contenedor-nav__img {
+  width: 190px;
+}
+
+.contenedor-nav__menu {
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+}
+
+.contenedor-nav__item-menu {
+  transition: all 0.3s ease;
+}
+
+.contenedor-nav__item-menu:hover {
+  transform: scale(1.1);
+}
+
+.contenedor-nav__search-and-cart {
+  display: flex;
+  gap: 30px;
+}
+
+.contenedor-nav__search {
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-nav__search-input {
+  border: solid 1px rgb(182, 182, 182);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.contenedor-nav__search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.contenedor-nav__search-input:focus-visible {
+  outline: none;
+}
+
+.contenedor-nav__search-input::placeholder {
+  opacity: 0.5;
+  color: white;
+}
+
+/*Otro componente*/
+
+.cart-widget {
+  display: flex;
+  align-items: center;
+}
+
+/*Otro componente*/
+
+.item-list-container {
+  background-image: url("../src/assets/fondos/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+  display: flex;
+}
+
+.item-list-container__title {
+  margin: auto;
+  font-size: 100px;
+  color: #ffffff;
+}

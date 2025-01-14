@@ -1,9 +1,12 @@
 import "./App.css";
+import NavBar from "./components/NavBar.jsx";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
     <>
-      <h1>Ecommerce FABRICA</h1>
+      <NavBar />
+      <ItemListContainer greeting="Bienvenidos a FABRICA" />
     </>
   );
 }
