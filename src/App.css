@@ -5,6 +5,11 @@
   height: 100px;
   background: #fff;
   padding: 0 60px;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .contenedor-nav__img {
@@ -65,16 +70,77 @@
 /*Otro componente*/
 
 .item-list-container {
-  background-image: url("../src/assets/fondos/fondo.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 800px;
   display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.item-list-container__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Para colocar el video detrás del título */
+  filter: brightness(0.9);
 }
 
 .item-list-container__title {
   margin: auto;
   font-size: 100px;
   color: #ffffff;
+  z-index: 1;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*Otro componente*/
+
+.item-count-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 50px;
+  width: 30%;
+
+  /*Sacar despues estos estilos y darle al padre un grid*/
+}
+
+.item-count-controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.item-count {
+  width: 30px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.button-decrement,
+.button-increase,
+.add-to-cart-button {
+  color: white;
+  border-radius: 1px;
+  background-color: #151515;
+  font-size: 38px;
+  min-width: 55px;
+}
+
+.add-to-cart-button {
+  white-space: nowrap;
+  width: 100%;
+  font-size: 30px;
+  height: 90px;
+}
+
+.is-disabled {
+  background: #909090;
+  cursor: default;
 }
