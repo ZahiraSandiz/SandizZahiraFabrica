@@ -1,11 +1,14 @@
 import CartWidget from "./CartWidget";
-import fabricaLogo from "../assets/logo/fabrica1.png";
 
 const NavBar = () => {
   return (
     <nav className="contenedor-nav">
       <a href="">
-        <img className="contenedor-nav__img" src={fabricaLogo} alt="Logo" />
+        <img
+          className="contenedor-nav__img"
+          src="../../public/img/logo/fabrica1.png"
+          alt="Logo"
+        />
       </a>
 
       <ul className="contenedor-nav__menu">
@@ -38,9 +41,9 @@ const NavBar = () => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 width="24"
                 height="24"
                 aria-label="Icono de búsqueda"
