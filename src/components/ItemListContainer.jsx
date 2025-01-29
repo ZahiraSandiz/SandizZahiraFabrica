@@ -1,16 +1,10 @@
-import ItemCount from "./ItemCount";
-import { getProducts } from "../mock/data";
 import { useEffect, useState } from "react";
+import { getProducts } from "../mock/data";
 import ItemList from "./ItemList";
 
 const ItemListContainer = ({ greeting }) => {
   const [productsList, setProductsList] = useState([]);
-
   const [loader, setLoader] = useState(false);
-
-  const onAdd = (cantidad) => {
-    alert(`agregaste ${cantidad} a tu carrito`);
-  };
 
   useEffect(() => {
     // Prendo el loader
@@ -38,7 +32,7 @@ const ItemListContainer = ({ greeting }) => {
         <h1 className="item-list-container__title">{greeting}</h1>
       </div>
 
-      {/* Aca hago un render concicional. Si louder está en true muestrpo un loader, sino, muestro las cards */}
+      {/* Aca hago un render concicional. Si louder está en true muestro un loader, sino, muestro las cards */}
 
       {loader ? (
         <div className="loader-overlay">
@@ -47,8 +41,6 @@ const ItemListContainer = ({ greeting }) => {
       ) : (
         <ItemList productsList={productsList} />
       )}
-
-      <ItemCount stock={9} onAdd={onAdd} />
     </>
   );
 };
