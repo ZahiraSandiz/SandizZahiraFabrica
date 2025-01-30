@@ -14,19 +14,16 @@ const NavBar = () => {
 
       <ul className="contenedor-nav__menu">
         <li className="contenedor-nav__item-menu">
-          <NavLink to="">Sale</NavLink>
+          <NavLink to="/category/sale">Sale</NavLink>
         </li>
         <li className="contenedor-nav__item-menu">
-          <NavLink to="">New</NavLink>
+          <NavLink to="/category/new">New</NavLink>
         </li>
         <li className="contenedor-nav__item-menu">
-          <NavLink to="">Top</NavLink>
+          <NavLink to="/">Todos los Productos</NavLink>
         </li>
         <li className="contenedor-nav__item-menu">
-          <NavLink to="">Bottom</NavLink>
-        </li>
-        <li className="contenedor-nav__item-menu">
-          <NavLink to="">Todos los Productos</NavLink>
+          <NavLink to="/cuidadotextil">Cuidado textil</NavLink>
         </li>
       </ul>
 

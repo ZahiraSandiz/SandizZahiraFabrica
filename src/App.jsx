@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar.jsx";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TextileCare from "./components/TextileCare";
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
           element={<ItemListContainer greeting="Bienvenidos a FABRICA" />}
         />
         <Route
-          path="/category/"
-          element={<ItemListContainer greeting="Categoria: " />}
+          path="/category/:categoryId"
+          element={<ItemListContainer greeting="Categoria: new " />}
         />
-        <Route path="/item/" element={<ItemDetailContainer />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path="/cuidadotextil" element={<TextileCare />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { getProducts } from "../mock/data";
 import ItemList from "./ItemList";
 
 const ItemListContainer = ({ greeting }) => {
   const [productsList, setProductsList] = useState([]);
   const [loader, setLoader] = useState(false);
+
+  const { categoryId } = useParams();
 
   useEffect(() => {
     // Prendo el loader
@@ -13,12 +16,18 @@ const ItemListContainer = ({ greeting }) => {
     //llamo a la promesa
     getProducts()
       // trato y la guardo en un estado
-      .then((res) => setProductsList(res))
+      .then((res) => {
+        if (categoryId) {
+          setProductsList(res.filter((item) => item.category === categoryId));
+        } else {
+          setProductsList(res);
+        }
+      })
       // si algo sale mal trabajo con el error
       .catch((error) => console.log(error))
       //se resuelva o no apagamos el loader
       .finally(() => setLoader(false));
-  }, []);
+  }, [categoryId]);
 
   return (
     <>

@@ -5,43 +5,39 @@ const products = [
     price: 79490,
     installments: "3 cuotas de: $23000",
     category: "new",
-    type: "top",
     img: "https://i.postimg.cc/XJt1wQ8S/pexels-david-manzyk-253085053-20426347.jpg",
     description: "bla bla",
     stock: 3,
   },
   {
     id: "02",
-    name: "Abrigo de piel Zare",
-    price: 61190,
+    name: "Blazer Aura",
+    price: 41190,
     installments: "3 cuotas de: $23000",
     category: "sale",
-    type: "top",
-    img: "https://i.postimg.cc/05JB81k8/pexels-david-manzyk-253085053-29879990.jpg",
+    img: "https://i.ibb.co/cSZNFnqw/Captura-de-Pantalla-2025-01-30-a-la-s-01-27-03.png",
     description: "bla bla",
-    stock: 8,
+    stock: 1,
   },
   {
     id: "03",
-    name: "Tapado Instinto",
-    price: 53490,
-    installments: "3 cuotas de: $23000",
-    category: "new",
-    type: "bottom",
-    img: "https://i.postimg.cc/5NSp0xZM/pexels-maksgelatin-6702723.jpg",
-    description: "bla bla",
-    stock: 8,
-  },
-  {
-    id: "04",
-    name: "Tapado Aura Boreal",
+    name: "Abrigo de piel Aura",
     price: 62490,
     installments: "3 cuotas de: $23000",
     category: "new",
-    type: "top",
     img: "https://i.postimg.cc/NMKP9WRk/pexels-lazarus-ziridis-351891426-29775708.jpg",
     description: "bla bla",
     stock: 10,
+  },
+  {
+    id: "04",
+    name: "Abrigo Zare",
+    price: 61190,
+    installments: "3 cuotas de: $23000",
+    category: "sale",
+    img: "https://i.postimg.cc/05JB81k8/pexels-david-manzyk-253085053-29879990.jpg",
+    description: "bla bla",
+    stock: 8,
   },
   {
     id: "05",
@@ -49,30 +45,27 @@ const products = [
     price: 49490,
     installments: "3 cuotas de: $23000",
     category: "sale",
-    type: "bottom",
     img: "https://i.postimg.cc/Nf6CH82S/pexels-maryiaplashchynskaya-3393793.jpg",
     description: "bla bla",
     stock: 7,
   },
   {
     id: "06",
-    name: "Abrigo de piel Amarty",
+    name: "Blazer Osk",
     price: 79490,
     installments: "3 cuotas de: $23000",
     category: "sale",
-    type: "bottom",
-    img: "https://i.postimg.cc/XJt1wQ8S/pexels-david-manzyk-253085053-20426347.jpg",
+    img: "https://i.ibb.co/TBDs5VbW/Captura-de-Pantalla-2025-01-30-a-la-s-01-26-00.png",
     description: "bla bla",
     stock: 3,
   },
   {
     id: "07",
-    name: "Abrigo piel",
+    name: "Chaleco Orne",
     price: 61190,
     installments: "3 cuotas de: $23000",
     category: "sale",
-    type: "top",
-    img: "https://i.postimg.cc/05JB81k8/pexels-david-manzyk-253085053-29879990.jpg",
+    img: "https://i.ibb.co/mCFZgRj4/Captura-de-Pantalla-2025-01-30-a-la-s-01-25-45.png",
     description: "bla bla",
     stock: 1,
   },
@@ -88,5 +81,14 @@ export const getProducts = () => {
         resolve(products);
       }
     }, 2000);
+  });
+};
+
+export const getOneProduct = (id) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      let product = products.find((item) => item.id === id);
+      resolve(product);
+    }, 1000);
   });
 };
