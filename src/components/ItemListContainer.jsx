@@ -32,13 +32,10 @@ const ItemListContainer = ({ greeting }) => {
   return (
     <>
       <div className="item-list-container">
-        <img
-          className="item-list-container__banner"
-          src="../../public/img/fondos/fondo1.jpg"
-          alt="fondo con modelo"
-        />
-
-        <h1 className="item-list-container__title">{greeting}</h1>
+        <h1 className="item-list-container__title">
+          {greeting}
+          {categoryId && <span>{categoryId}</span>}
+        </h1>
       </div>
 
       {/* Aca hago un render concicional. Si louder está en true muestro un loader, sino, muestro las cards */}

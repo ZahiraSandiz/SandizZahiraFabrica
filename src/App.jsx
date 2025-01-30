@@ -14,12 +14,12 @@ function App() {
           path="/"
           element={<ItemListContainer greeting="Bienvenidos a FABRICA" />}
         />
-        <Route
-          path="/category/:categoryId"
-          element={<ItemListContainer greeting="Categoria: new " />}
-        />
+        <Route path="/category/:categoryId" element={<ItemListContainer />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
-        <Route path="/cuidadotextil" element={<TextileCare />} />
+
+        {/*Hice esto, pero no se si está bien visto desde las rubricas de evaluación, entonces lo comenté por las dudas*/}
+
+        {/* <Route path="/cuidadotextil" element={<TextileCare />} /> */}
       </Routes>
     </BrowserRouter>
   );

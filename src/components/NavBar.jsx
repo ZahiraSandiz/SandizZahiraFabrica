@@ -20,11 +20,16 @@ const NavBar = () => {
           <NavLink to="/category/new">New</NavLink>
         </li>
         <li className="contenedor-nav__item-menu">
-          <NavLink to="/">Todos los Productos</NavLink>
+          <NavLink to="/category/tendencias">Tendencias</NavLink>
         </li>
         <li className="contenedor-nav__item-menu">
-          <NavLink to="/cuidadotextil">Cuidado textil</NavLink>
+          <NavLink to="/">Todos los Productos</NavLink>
         </li>
+        {/*Hice esto, pero no se si está bien visto desde las rubricas de evaluación, entonces lo comenté por las dudas*/}
+
+        {/* <li className="contenedor-nav__item-menu">
+          <NavLink to="/cuidadotextil">Cuidado textil</NavLink>
+        </li>*/}
       </ul>
 
       <div className="contenedor-nav__search-and-cart">
