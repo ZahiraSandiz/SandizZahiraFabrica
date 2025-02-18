@@ -1,8 +1,12 @@
 import React from "react";
 import ItemCount from "./ItemCount";
+import { useState } from "react";
 
 const ItemDetail = ({ productDetail }) => {
+  const [purchase, setPurchase] = useState(false);
+
   const onAdd = (cantidad) => {
+    setPurchase(true);
     alert(`Agregaste ${cantidad} a tu carrito`);
   };
 
@@ -30,7 +34,11 @@ const ItemDetail = ({ productDetail }) => {
           </p>
           <p> 3 cuotas sin interes de: ${productDetail.installments}</p>
         </div>
-        <ItemCount stock={productDetail.stock} onAdd={onAdd} />
+        {!purchase ? (
+          <ItemCount stock={productDetail.stock} onAdd={onAdd} />
+        ) : (
+          <button className="add-to-cart-button">Ir al carrito</button>
+        )}
       </div>
     </div>
   );
