@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+
 const CartWidget = () => {
+  const { cart } = useContext(CartContext);
   return (
     <div className="cart-widget">
       <button className="cartWidget__button">
@@ -19,7 +23,7 @@ const CartWidget = () => {
           <path d="M5 5h2l1 10h10l1-6H7" />
         </svg>
       </button>
-      <span>3</span>
+      <span>{cart.length}</span>
     </div>
   );
 };

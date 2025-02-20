@@ -1,14 +1,18 @@
 import React from "react";
 import ItemCount from "./ItemCount";
 import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ({ productDetail }) => {
   const [purchase, setPurchase] = useState(false);
+  const { cart, addItem } = useContext(CartContext);
 
   const onAdd = (cantidad) => {
     setPurchase(true);
-    alert(`Agregaste ${cantidad} a tu carrito`);
+    addItem(productDetail, cantidad);
   };
+  console.log("carrito", cart);
 
   return (
     <div className="item-detail">
@@ -37,7 +41,10 @@ const ItemDetail = ({ productDetail }) => {
         {!purchase ? (
           <ItemCount stock={productDetail.stock} onAdd={onAdd} />
         ) : (
-          <button className="add-to-cart-button">Ir al carrito</button>
+          <div>
+            <button>Ir al carrito</button>
+            <button>Volver al inicio</button>
+          </div>
         )}
       </div>
     </div>
