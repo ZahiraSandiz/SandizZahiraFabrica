@@ -1,41 +1,62 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+import CartItem from "./CartItem";
+import EmptyCart from "./EmptyCart";
+import { Link } from "react-router-dom";
 
 const CartList = () => {
+  const { cart, clear, cartTotal } = useContext(CartContext);
+
   return (
-    <div>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa officia
-      nihil commodi molestias aliquam consequatur, possimus ab. Earum quo,
-      repudiandae cumque, dignissimos ab sunt neque dolore quis velit quibusdam
-      aut voluptatibus ullam iusto dolores nemo quas. Sint fuga id, minima,
-      minus inventore molestias praesentium sapiente deserunt earum itaque enim
-      delectus aperiam sunt rem incidunt reprehenderit eligendi sit esse aliquam
-      culpa nulla quidem. Commodi similique odit voluptas sequi numquam fuga
-      nulla sit. Nemo nihil, ducimus inventore et, non aliquid omnis suscipit
-      consequatur consequuntur dignissimos saepe. Sed at optio aut ipsam labore
-      tempora aperiam enim natus deserunt minus, velit eligendi nesciunt
-      provident nostrum exercitationem nihil distinctio repellat in nulla iste
-      voluptate quidem ratione? Labore aliquam cumque nihil dolor tempora,
-      eveniet, doloremque cum quae earum voluptas enim fugit minima! Nam
-      voluptates, esse magni praesentium velit dolorum! Pariatur quae veritatis
-      nam ut nihil modi exercitationem ab inventore laboriosam rem? Nostrum
-      cumque officiis nisi? Tempore, iure quod accusantium cum quisquam tenetur
-      aspernatur enim nemo sequi veritatis voluptates. Fuga sequi explicabo sunt
-      hic! Vitae recusandae inventore itaque corrupti ea similique dolores hic.
-      Libero laborum odit in perspiciatis tempore quam fugit quaerat accusantium
-      suscipit. Quasi eligendi, molestias eum libero in dolorum nam fugit
-      commodi rerum tempore voluptatem laborum, officiis labore voluptas hic
-      consectetur veritatis maxime corporis veniam a. Consequuntur quibusdam
-      minus rerum quisquam, provident non? Consectetur obcaecati earum tenetur
-      iste est non quae, hic esse nesciunt facilis repudiandae maxime fugit
-      impedit quis nostrum repellendus consequuntur modi laboriosam? Ea magni
-      ullam delectus adipisci incidunt, labore sunt nesciunt! Consequuntur harum
-      illum dolorem magnam cumque in eum repellendus accusamus laudantium autem
-      adipisci nesciunt quaerat quasi cupiditate, facere at. Velit ullam
-      dignissimos blanditiis similique sed sapiente totam aperiam impedit
-      aliquid provident. Exercitationem earum veritatis, corrupti quaerat neque
-      quod. Animi consequatur ullam, modi libero, odit, delectus magnam eos iure
-      laudantium voluptatem quis.
-      <h1>ESTAS EN EL CARRITO</h1>
+    <div className="cart-list">
+      {cart.length === 0 ? (
+        <EmptyCart />
+      ) : (
+        <>
+          <div className="cart-list__cart">
+            <div className="cart-list__promo-banner">
+              <p>
+                EXCLUSIVO <strong>Santander</strong>
+              </p>
+              <h2>12 CUOTAS SIN INTERÉS</h2>
+              <p>EN COMPRAS SUPERIORES A $190.000</p>
+            </div>
+
+            <table className="cart-list__table">
+              <thead className="cart-list__table-head">
+                <tr>
+                  <th className="cart-list__table-header">Producto</th>
+                  <th className="cart-list__table-header">Envío</th>
+                  <th className="cart-list__table-header">Precio</th>
+                  <th className="cart-list__table-header">Cantidad</th>
+                  <th className="cart-list__table-header">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody className="cart-list__table-body">
+                {cart.map((item) => (
+                  <CartItem key={item.id} item={item} />
+                ))}
+              </tbody>
+            </table>
+            <button className="cart-list__button-delete" onClick={clear}>
+              Vaciar carrito
+            </button>
+          </div>
+
+          <div className="cart-list__summary">
+            <h3 className="cart-list__summary-title">Resumen de compra</h3>
+            <div className="cart-list__total">
+              <p className="cart-list__total-price">
+                TOTAL <span>${cartTotal()}</span>
+              </p>
+            </div>
+            <button className="cart-list__checkout">Iniciar compra</button>
+            <Link to="/" className="cart-list__continue">
+              Seguir comprando
+            </Link>
+          </div>
+        </>
+      )}
     </div>
   );
 };

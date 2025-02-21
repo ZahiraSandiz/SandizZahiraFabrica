@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const CartWidget = () => {
-  const { cart } = useContext(CartContext);
+  const { cartQuantity } = useContext(CartContext);
   return (
     <div className="cart-widget">
       <button className="cart-widget__button">
@@ -23,7 +23,7 @@ const CartWidget = () => {
           <path d="M5 5h2l1 10h10l1-6H7" />
         </svg>
       </button>
-      <span>{cart.length}</span>
+      {cartQuantity() > 0 && <span>{cartQuantity()}</span>}
     </div>
   );
 };

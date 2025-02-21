@@ -13,7 +13,6 @@ const ItemDetail = ({ productDetail }) => {
     setPurchase(true);
     addItem(productDetail, cantidad);
   };
-  console.log("carrito", cart);
 
   return (
     <div className="item-detail">

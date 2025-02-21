@@ -6,10 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TextileCare from "./components/TextileCare";
 import { CartProvider } from "./context/CartContext";
 import CartContainer from "./components/CartContainer";
+import Banner from "./components/Banner";
 
 function App() {
   return (
     <BrowserRouter>
+      <Banner />
       <CartProvider>
         <NavBar />
         <Routes>
