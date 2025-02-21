@@ -60,7 +60,9 @@ const NavBar = () => {
           </button>
         </form>
 
-        <CartWidget />
+        <NavLink to="/cart">
+          <CartWidget />
+        </NavLink>
       </div>
     </nav>
   );

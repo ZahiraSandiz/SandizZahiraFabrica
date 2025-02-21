@@ -5,7 +5,7 @@ const CartWidget = () => {
   const { cart } = useContext(CartContext);
   return (
     <div className="cart-widget">
-      <button className="cartWidget__button">
+      <button className="cart-widget__button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
