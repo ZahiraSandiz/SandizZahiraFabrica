@@ -1,22 +1,9 @@
 import React from "react";
 import { useContext } from "react";
-import { useState } from "react";
 import { CartContext } from "../context/CartContext";
 
 function CartItem({ item }) {
-  const { removeItem, updateQuantity } = useContext(CartContext);
-
-  const handleQuantityChange = (operation) => {
-    let newQuantity = item.quantity;
-
-    if (operation === "increase" && newQuantity < item.stock) {
-      newQuantity++;
-    } else if (operation === "decrease" && newQuantity > 1) {
-      newQuantity--;
-    }
-
-    updateQuantity(item.id, newQuantity);
-  };
+  const { removeItem, handleQuantityChange } = useContext(CartContext);
 
   return (
     <tr>
@@ -32,9 +19,13 @@ function CartItem({ item }) {
       <td>Gratis</td>
       <td>{item.price}</td>
       <td className="cart-item__quantity">
-        <button onClick={() => handleQuantityChange("decrease")}>-</button>
+        <button onClick={() => handleQuantityChange(item.id, "decrease")}>
+          -
+        </button>
         <span>{item.quantity}</span>
-        <button onClick={() => handleQuantityChange("increase")}>+</button>
+        <button onClick={() => handleQuantityChange(item.id, "increase")}>
+          +
+        </button>
       </td>
       <td className="cart-item__subtotal">${item.price * item.quantity}</td>
       <td>

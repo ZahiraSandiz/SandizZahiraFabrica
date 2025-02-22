@@ -7,6 +7,7 @@ import TextileCare from "./components/TextileCare";
 import { CartProvider } from "./context/CartContext";
 import CartContainer from "./components/CartContainer";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/cart" element={<CartContainer />} />
         </Routes>
       </CartProvider>
+      <Footer />
     </BrowserRouter>
   );
 }

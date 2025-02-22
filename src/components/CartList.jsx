@@ -16,7 +16,7 @@ const CartList = () => {
           <div className="cart-list__cart">
             <div className="cart-list__promo-banner">
               <p>
-                EXCLUSIVO <strong>Santander</strong>
+                EXCLUSIVO <strong>Banco Ital</strong>
               </p>
               <h2>12 CUOTAS SIN INTERÉS</h2>
               <p>EN COMPRAS SUPERIORES A $190.000</p>

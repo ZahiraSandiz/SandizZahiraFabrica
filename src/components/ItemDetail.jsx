@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 
 const ItemDetail = ({ productDetail }) => {
   const [purchase, setPurchase] = useState(false);
-  const { cart, addItem } = useContext(CartContext);
+  const { cart, addToCart } = useContext(CartContext);
 
   const onAdd = (cantidad) => {
     setPurchase(true);
-    addItem(productDetail, cantidad);
+    addToCart(productDetail, cantidad);
   };
 
   return (
