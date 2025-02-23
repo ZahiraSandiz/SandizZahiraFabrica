@@ -36,7 +36,6 @@ const ItemDetail = ({ productDetail }) => {
           <p className="item-detail__price">
             Precio al contado: ${productDetail.price},00
           </p>
-          <p> 3 cuotas sin interes de: ${productDetail.installments}</p>
         </div>
         {!purchase ? (
           <ItemCount stock={productDetail.stock} onAdd={onAdd} />

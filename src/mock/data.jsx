@@ -3,7 +3,6 @@ const products = [
     id: "01",
     name: "Abrigo de piel Amarty",
     price: 79490,
-    installments: "3 cuotas de: $23000",
     category: "tendencias",
     img: "https://i.postimg.cc/XJt1wQ8S/pexels-david-manzyk-253085053-20426347.jpg",
     description:
@@ -14,7 +13,6 @@ const products = [
     id: "02",
     name: "Blazer Space",
     price: 41190,
-    installments: "3 cuotas de: $23000",
     category: "tendencias",
     img: "https://i.ibb.co/cSZNFnqw/Captura-de-Pantalla-2025-01-30-a-la-s-01-27-03.png",
     description:
@@ -25,7 +23,6 @@ const products = [
     id: "03",
     name: "Abrigo de piel Aura",
     price: 62490,
-    installments: "3 cuotas de: $23000",
     category: "new",
     img: "https://i.postimg.cc/NMKP9WRk/pexels-lazarus-ziridis-351891426-29775708.jpg",
     description:
@@ -36,7 +33,6 @@ const products = [
     id: "04",
     name: "Tapado Micaela",
     price: 61190,
-    installments: "3 cuotas de: $23000",
     category: "sale",
     img: "https://i.postimg.cc/05JB81k8/pexels-david-manzyk-253085053-29879990.jpg",
     description:
@@ -47,7 +43,6 @@ const products = [
     id: "05",
     name: "Trench Luisa",
     price: 49490,
-    installments: "3 cuotas de: $23000",
     category: "sale",
     img: "https://i.postimg.cc/Nf6CH82S/pexels-maryiaplashchynskaya-3393793.jpg",
     description:
@@ -58,7 +53,6 @@ const products = [
     id: "06",
     name: "Blazer Osk",
     price: 79490,
-    installments: "3 cuotas de: $23000",
     category: "sale",
     img: "https://i.ibb.co/TBDs5VbW/Captura-de-Pantalla-2025-01-30-a-la-s-01-26-00.png",
     description:
@@ -69,7 +63,6 @@ const products = [
     id: "07",
     name: "Chaleco Orne",
     price: 61190,
-    installments: "3 cuotas de: $23000",
     category: "sale",
     img: "https://i.ibb.co/mCFZgRj4/Captura-de-Pantalla-2025-01-30-a-la-s-01-25-45.png",
     description:
@@ -80,7 +73,6 @@ const products = [
     id: "08",
     name: "Pantalon Aurora",
     price: 61190,
-    installments: "3 cuotas de: $23000",
     category: "new",
     img: "https://i.ibb.co/YHLj8m4/Captura-de-Pantalla-2025-01-30-a-la-s-03-10-53.png",
     description:
@@ -91,7 +83,6 @@ const products = [
     id: "09",
     name: "Conjunto Palta",
     price: 61190,
-    installments: "3 cuotas de: $23000",
     category: "new",
     img: "https://i.ibb.co/BKCchc4M/Captura-de-Pantalla-2025-01-30-a-la-s-03-10-24.png",
     description:
@@ -102,7 +93,6 @@ const products = [
     id: "10",
     name: "Blazer Rend",
     price: 61190,
-    installments: "3 cuotas de: $23000",
     category: "new",
     img: "https://i.ibb.co/4gRvCkPp/Captura-de-Pantalla-2025-01-30-a-la-s-03-12-30.png",
     description:

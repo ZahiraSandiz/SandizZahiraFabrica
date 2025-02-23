@@ -8,7 +8,6 @@ const Item = ({ product }) => {
       <div className="card__body">
         <h2 className="card__title">{product.name}</h2>
         <p className="card__price">$ {product.price},00</p>
-        <p className="card__installments">{product.installments}</p>
       </div>
     </Link>
   );
