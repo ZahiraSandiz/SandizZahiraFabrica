@@ -2,14 +2,30 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProducts } from "../mock/data";
 import ItemList from "./ItemList";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../services/firebase";
 
 const ItemListContainer = ({ greeting }) => {
   const [productsList, setProductsList] = useState([]);
   const [loader, setLoader] = useState(false);
-
   const { categoryId } = useParams();
 
-  //FIREBASE -> 1:19:34 video
+  //FIREBASE
+  useEffect(() => {
+    setLoader(true);
+    const productsCollection = collection(db, "products");
+
+    getDocs(productsCollection)
+      .then((res) => {
+        const list = res.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setProductsList(list);
+      })
+      .catch((error) => console.log(error))
+      .finally(() => setLoader(false));
+  }, []);
 
   //PROMISE LOCAL
   // useEffect(() => {
