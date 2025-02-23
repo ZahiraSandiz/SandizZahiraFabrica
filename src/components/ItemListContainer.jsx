@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProducts } from "../mock/data";
 import ItemList from "./ItemList";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../services/firebase";
 
 const ItemListContainer = ({ greeting }) => {
@@ -13,7 +13,9 @@ const ItemListContainer = ({ greeting }) => {
   //FIREBASE
   useEffect(() => {
     setLoader(true);
-    const productsCollection = collection(db, "products");
+    const productsCollection = categoryId
+      ? query(collection(db, "products"), where("category", "==", categoryId))
+      : collection(db, "products");
 
     getDocs(productsCollection)
       .then((res) => {
@@ -25,7 +27,7 @@ const ItemListContainer = ({ greeting }) => {
       })
       .catch((error) => console.log(error))
       .finally(() => setLoader(false));
-  }, []);
+  }, [categoryId]);
 
   //PROMISE LOCAL
   // useEffect(() => {

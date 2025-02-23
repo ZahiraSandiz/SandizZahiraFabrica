@@ -307,7 +307,8 @@
 
 /*Otro componente*/
 
-.ItemList {
+.item-list {
+  max-width: 300px;
   display: grid;
   gap: 20px;
   padding: 20px;
