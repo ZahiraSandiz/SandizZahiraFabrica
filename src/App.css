@@ -880,9 +880,10 @@ input[type="number"] {
 
 /*Otro componente*/
 .checkout {
-  max-width: 500px;
+  max-width: 80%;
   margin: auto;
-  margin-top: 120px;
+  margin-top: 220px;
+  margin-bottom: 300px;
   padding: 60px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -895,8 +896,12 @@ input[type="number"] {
   text-align: center;
 }
 
+.checkout__row .checkout__group {
+  width: 48%;
+}
+
 .checkout__group {
-  margin-bottom: 15px;
+  height: 100px;
 }
 
 .checkout__group label {
@@ -925,33 +930,48 @@ input[type="number"] {
 
 .checkout__button {
   width: 100%;
-  padding: 10px;
-  background-color: gray;
+  background-color: #000000;
   color: white;
+  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .checkout__button:hover {
   background-color: darkgray;
 }
 
+.checkout__button:disabled {
+  background-color: #ccc; /* Gris claro cuando está deshabilitado */
+  cursor: not-allowed; /* Cambia el cursor */
+}
+
 .checkout-order-id {
-  margin-top: 120px;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.checkout-order-id p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .checkout-order-id h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  border-bottom: solid 1px grey;
 }
 
 .checkout-order-id span {
   font-size: 1.5rem;
   font-weight: bold;
-  color: blue;
 }
 
 .checkout-order-id a {
