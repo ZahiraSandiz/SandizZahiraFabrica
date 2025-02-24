@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { createContext, useState, useEffect } from "react";
 
 // Creamos y exportamos el contexto

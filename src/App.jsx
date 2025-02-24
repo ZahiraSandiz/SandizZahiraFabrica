@@ -8,6 +8,7 @@ import { CartProvider } from "./context/CartContext";
 import CartContainer from "./components/CartContainer";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
+import Checkout from "./components/Checkout";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/cuidadotextil" element={<TextileCare />} />
           <Route path="/cart" element={<CartContainer />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </CartProvider>
       <Footer />

@@ -510,7 +510,7 @@
 /* Otro componente */
 
 .cart-list {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 /* Otro componente*/
@@ -687,6 +687,9 @@ input[type="number"] {
 
 /* ----- Buttons & Links ----- */
 .cart-list__checkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: black;
   color: white;
   border: none;
@@ -856,7 +859,7 @@ input[type="number"] {
 /*Otro componente*/
 
 .invalid-item {
-  margin-top: 100px;
+  margin-top: 120px;
   width: 100vw;
   height: 500px;
   display: flex;
@@ -873,4 +876,91 @@ input[type="number"] {
 
 .invalid-item__link:hover {
   transform: scale(1.1);
+}
+
+/*Otro componente*/
+.checkout {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 120px;
+  padding: 60px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.checkout__title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.checkout__group {
+  margin-bottom: 15px;
+}
+
+.checkout__group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.checkout__group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.checkout__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkout__button {
+  width: 100%;
+  padding: 10px;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout__button:hover {
+  background-color: darkgray;
+}
+
+.checkout-order-id {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.checkout-order-id h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.checkout-order-id span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: blue;
+}
+
+.checkout-order-id a {
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.checkout-order-id a:hover {
+  color: gray;
 }

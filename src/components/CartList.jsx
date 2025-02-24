@@ -19,7 +19,7 @@ const CartList = () => {
                 EXCLUSIVO <strong>Banco Ital</strong>
               </p>
               <h2>12 CUOTAS SIN INTERÉS</h2>
-              <p>EN COMPRAS SUPERIORES A $190.000</p>
+              <p>EN COMPRAS SUPERIORES A $500.000</p>
             </div>
 
             <table className="cart-list__table">
@@ -50,8 +50,10 @@ const CartList = () => {
                 TOTAL <span>${cartTotal()}</span>
               </p>
             </div>
-            <button className="cart-list__checkout">Iniciar compra</button>
-            <Link to="/" className="cart-list__continue">
+            <Link className="cart-list__checkout" to="/checkout">
+              Iniciar compra
+            </Link>
+            <Link className="cart-list__continue" to="/">
               Seguir comprando
             </Link>
           </div>
